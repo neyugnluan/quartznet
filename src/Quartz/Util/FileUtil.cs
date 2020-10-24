@@ -66,7 +66,7 @@ namespace Quartz.Util
                 try
                 {
 #if NETSTANDARD
-                    fName = Path.Combine(AppContext.BaseDirectory, fName);
+                    fName = Path.Combine(AppContext.BaseDirectory + string.Empty, fName);
 #else
                     fName = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase ?? "", fName);
 #endif
